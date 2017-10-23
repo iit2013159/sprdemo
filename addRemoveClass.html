@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.bold {
+        font-weight: bold;
+}
+
+.blue {
+        color: blue;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#add").click(function(){
+    	$("#divTestArea1 span, #divTestArea1 b").addClass("blue");
+        $("#divTestArea1 div").addClass("bold blue");
+    });
+    
+    $("#remove").click(function(){
+    	$("#divTestArea1 span, #divTestArea1 b").removeClass("blue");
+        $("#divTestArea1 div").removeClass("bold blue");
+    });
+    
+    $("#toggle").click(function(){
+    	if($("#divTestArea1 span, #divTestArea1 b").hasClass("blue"))
+    	{
+    		$("#divTestArea1 span, #divTestArea1 b").removeClass("blue")
+    	}
+    	else
+    	{
+    		$("#divTestArea1 span, #divTestArea1 b").addClass("blue")
+    	}
+    });
+});
+</script>
+</head>
+<body>
+<div id="divTestArea1">
+        <span>Test 1</span><br />
+        <div>Test 2</div>
+        <b>Test 3</b><br />
+</div>
+	<button id="add">Add Class</button>
+	<button id="remove">Remove Class</button>
+	<button id="toggle">Toggle Class</button>
+
+</body>
+</html>

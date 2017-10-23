@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("<span>Hello World!</span>").appendTo("p");
+    });
+    
+    $("#btn2").click(function(){
+        $("<span>Hello World!</span>").prependTo("p");
+    });
+});
+</script>
+</head>
+<body>
+
+<button id="btn1">Append span element at the end of each p element</button>
+<button id="btn2">Prepend span element at the end of each p element</button>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+</body>
+</html>
